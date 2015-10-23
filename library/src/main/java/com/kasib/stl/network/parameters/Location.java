@@ -6,7 +6,12 @@ package com.kasib.stl.network.parameters;
 
 public class Location extends Jsonable {
 
-    public float latitude;
-    public float longitude;
+    public final double latitude;
+    public final double longitude;
+
+    public Location(double latitude, double longitude) {
+        this.latitude = latitude;
+        this.longitude = longitude;
+    }
 
 }

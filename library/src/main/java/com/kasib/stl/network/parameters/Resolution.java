@@ -6,7 +6,11 @@ package com.kasib.stl.network.parameters;
 
 public class Resolution extends Jsonable {
 
-    public int width;
-    public int height;
+    public final int width;
+    public final int height;
 
+    public Resolution(int width, int height) {
+        this.width = width;
+        this.height = height;
+    }
 }
