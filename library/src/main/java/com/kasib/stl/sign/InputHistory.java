@@ -71,21 +71,21 @@ class InputHistory {
     protected void updateGraphHistory(Point currentPoint, Point lastPoint) {
         final Point pathPoint = Point.between(lastPoint, currentPoint);
         if (mCurrentInput.size() == 2) {
-            mCurrentGraphPath.moveTo(pathPoint.X, pathPoint.Y);
+            mCurrentGraphPath.moveTo(pathPoint.x, pathPoint.y);
         } else {
-            mCurrentGraphPath.quadTo(lastPoint.X, lastPoint.Y, pathPoint.X, pathPoint.Y);
+            mCurrentGraphPath.quadTo(lastPoint.x, lastPoint.y, pathPoint.x, pathPoint.y);
         }
     }
 
     protected void endObject() {
         if (isPoint(mCurrentInput)) {
             mGraphPoints.add(mCurrentInput.get(0));
-            mPointPressures.add(mCurrentInput.get(0).P);
+            mPointPressures.add(mCurrentInput.get(0).p);
         } else {
             mGraphPaths.add(mCurrentGraphPath);
             float totalPressures = 0;
             for (Point point : mCurrentInput) {
-                totalPressures += point.P;
+                totalPressures += point.p;
             }
             mAvgPressures.add(totalPressures / mCurrentInput.size());
         }
@@ -106,14 +106,14 @@ class InputHistory {
 
     private Point getMinimumPoint(List<Point> points) {
         Point minPoint = points.get(0);
-        float minX = minPoint.X;
-        float minY = minPoint.Y;
+        float minX = minPoint.x;
+        float minY = minPoint.y;
 
         for (Point point : points) {
-            if (point.X < minX)
-                minX = point.X;
-            if (point.Y < minY)
-                minY = point.Y;
+            if (point.x < minX)
+                minX = point.x;
+            if (point.y < minY)
+                minY = point.y;
         }
         return new Point(minX, minY);
     }
@@ -129,10 +129,10 @@ class InputHistory {
 
 
     private boolean isPoint(List<Point> mPoints) {
-        final float firstX = mPoints.get(0).X;
-        final float firstY = mPoints.get(0).Y;
+        final float firstX = mPoints.get(0).x;
+        final float firstY = mPoints.get(0).y;
         for (Point point : mPoints) {
-            if (Math.abs(point.X - firstX) > OFFSET_IS_NOT_A_POINT || Math.abs(point.Y - firstY) > OFFSET_IS_NOT_A_POINT) {
+            if (Math.abs(point.x - firstX) > OFFSET_IS_NOT_A_POINT || Math.abs(point.y - firstY) > OFFSET_IS_NOT_A_POINT) {
                 return false;
             }
         }

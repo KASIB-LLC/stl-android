@@ -72,7 +72,7 @@ class Drawer {
             final float avgPressure = inputHistory.getPointPressures().get(i);
             if (avgPressure == 0) mPointsPaint.setStrokeWidth(mStrokeWidth);
             else mPointsPaint.setStrokeWidth(mStrokeWidth * avgPressure);
-            canvas.drawPoint(point.X, point.Y, mPointsPaint);
+            canvas.drawPoint(point.x, point.y, mPointsPaint);
         }
         for (int i = 0; i < inputHistory.getGraphPaths().size(); i++) {
             final Path path = inputHistory.getGraphPaths().get(i);
