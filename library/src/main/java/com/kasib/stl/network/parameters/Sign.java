@@ -1,4 +1,4 @@
-package com.kasib.stl.parameters;
+package com.kasib.stl.network.parameters;
 
 import com.kasib.stl.sign.Point;
 

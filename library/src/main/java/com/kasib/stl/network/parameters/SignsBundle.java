@@ -1,4 +1,4 @@
-package com.kasib.stl.parameters;
+package com.kasib.stl.network.parameters;
 
 /**
  * Created by Pasenchuk Victor on 24.10.15

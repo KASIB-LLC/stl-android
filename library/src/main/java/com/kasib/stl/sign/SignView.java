@@ -8,7 +8,7 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.kasib.stl.parameters.Sign;
+import com.kasib.stl.network.parameters.Sign;
 
 import java.io.FileOutputStream;
 

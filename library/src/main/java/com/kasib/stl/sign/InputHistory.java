@@ -6,7 +6,7 @@ package com.kasib.stl.sign;
 
 import android.graphics.Path;
 
-import com.kasib.stl.parameters.Sign;
+import com.kasib.stl.network.parameters.Sign;
 
 import java.util.ArrayList;
 import java.util.List;
