@@ -24,7 +24,7 @@ import retrofit.http.POST;
  */
 public interface SignToLoginService {
 
-    int
+    byte
             GENDER_MALE = 1,
             GENDER_FEMALE = 0;
 
@@ -44,7 +44,7 @@ public interface SignToLoginService {
             @Nullable @Field("position") String position,
             @Nullable @Field("phone_number") String phone_number,
             @Nullable @Field("age") String age,
-            @Field("gender") int gender,
+            @Nullable @Field("gender") Byte gender,
             @Nullable @Field("location") Location location,
             @Nullable @Field("country") String country,
             @Nullable @Field("city") String city,
